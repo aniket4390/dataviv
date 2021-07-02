@@ -14,19 +14,20 @@ class _LoginState extends State<Login> {
           Column(
             children: [
               Container(
-                color: Colors.orange,
+                color: Color(0xfff2784f),
                 height: MediaQuery.of(context).size.height/2,width: MediaQuery.of(context).size.width,),
               Container(
-                color: Colors.blueAccent,
+                color: Color(0xff30C8FE),
                 height: MediaQuery.of(context).size.height/2,width: MediaQuery.of(context).size.width,),
             ],
           ),
           ClipPath(
             clipper: MyCustomeClipper(),
             child: Container(
-              color: Colors.lightGreenAccent,
+              color: Colors.white,
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
+            
             ),
           ),
        
@@ -77,63 +78,9 @@ class MyCustomeClipper extends CustomClipper<Path>{
     var sixthEndPoint = Offset(0.0, size.height * 0.28);
     path.quadraticBezierTo(sixthControlPoint.dx, sixthControlPoint.dy,
         sixthEndPoint.dx, sixthEndPoint.dy); 
-
-    path.close();
-
-//     path.moveTo(0, size!.height * 0.33);
-//      //path.lineTo(size.width *0.2 , size.height *0.2);
-//      path.lineTo(0 , size.height );
-//     path.lineTo(size.width*0.2 , size.height );
-//      //path.lineTo(size.width  , size.height * 0.8);
-//    final firstControlPoint = Offset(size.width *0.5, size.height);
-//     final firstEndPoint = Offset(size.width * 0.5 , size.height * 0.8);
-//   path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
-//     firstEndPoint.dx, firstEndPoint.dy);
-
-//     var secondControlPoint =
-//     Offset(size.width * 0.8, size.height );
-// var secondEndPoint = Offset(size.width * 0.5, size.height * 0.8);
-// path.quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
-//     secondEndPoint.dx, secondEndPoint.dy);
-
-//      path.lineTo(size.width , 0);
-//      path.lineTo(size.width * 0.9, 0);
-    //  path.lineTo(size.width , size.height*0.8);
-
-
-    // var firstControlPoint = Offset(size.width / 4, size.height);
-    // var firstEndPoint = Offset(size.width / 2.25, size.height - 40.0);
-    // path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
-    //     firstEndPoint.dx, firstEndPoint.dy);
-
-    // var secondControlPoint =
-    //     Offset(size.width - (size.width / 4.25), size.height - 85);
-    // var secondEndPoint = Offset(size.width - 40 , 0.0);
-    // path.quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
-    //     secondEndPoint.dx, secondEndPoint.dy);
-
-   // path.lineTo(size.width, size.height - 40);
-    //path.lineTo(size.width, 0.0);
-    //path.close();
-
-
-    // path.lineTo(0, size!.height);
-    // path.quadraticBezierTo(size.width/4, size.height- 20, size.width/2, size.height-20);
-    // //path.quadraticBezierTo(3/4*size.width, size.height,size.width, size.height-30);
-    // path.quadraticBezierTo(size.width, size.height,size.width/2, size.height-50);
-    // path.lineTo(size.width , 0.0);
-    // var path = new Path();
-    // path.lineTo(0, size!.height-40);
-    // path.quadraticBezierTo(size.width/4, size.height, size.width/2, size.height );
-    // var firstStartPoint = Offset(size.width/4 - size.width/8, size.height);
-    // var firstEndPoint = Offset(size.width/4 + size.width/8, size.height);
-    // path.quadraticBezierTo(firstStartPoint.dx, firstEndPoint.dy, firstStartPoint.dx, firstEndPoint.dy);
-    // path.lineTo(size.width, 0.0);
     //path.close();
     return path;
-
   }
-
   @override
   bool shouldReclip(covariant CustomClipper oldClipper) => false;
 } 
